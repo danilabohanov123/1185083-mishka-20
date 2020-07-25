@@ -6,116 +6,120 @@
   </head>
   <body class="page-main">
     <header class="page-header">
-      <a class="page-header__logo link" href="index.html">
-        <img class="image" src="https://via.placeholder.com/150x150" alt="Логотип сайта" width="86" height="35">
+      <a class="page-header__logo" href="index.html">
+        <img src="https://via.placeholder.com/150x150" alt="Логотип сайта" width="86" height="35">
       </a>
       <button class="page-header__toggle" type="button">Открыть/закрыть</button>
       <nav class="nav-main">
         <ul class="nav-main__list site-list">
           <li class="site-list__item">
-            <a class="link">Каталог товаров</a>
+            <a>Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a class="link" href="form.html">Вязание на заказ</a>
+            <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="nav-main__list user-list">
           <li class="user-list__item">
-            <a class="link" href="#">Поиск по сайту</a>
+            <a href="#">Поиск по сайту</a>
           </li>
           <li class="user-list__item">
-            <a class="link" href="#">Корзина: пока пуста</a>
+            <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <div class="page-main__title-wrapper">
-        <h1 class="page-main__title page-title">Милые штуки ручной работы для дома</h1>
+      <div class="page-main__group-wrapper">
+        <h1 class="container page-title">Милые штуки ручной работы для дома</h1>
       </div>
-      <h2 class="visually-hidden">Список товаров</h2>
-      <ul class="page-main__section products-list">
-        <li class="products-list__item">
-          <a class="products-list__image-link">
-            <img class="image" src="https://via.placeholder.com/150x150" alt="Зайчик-попрыгайчик" width="260" height="195">
-          </a>
-          <div class="products-list__group-wrapper">
-            <h3 class="products-list__product-title">Зайчик-попрыгайчик</h3>
-            <p class="products-list__specifications">Рост 30 см, вес 200 г</p>
-            <p class="products-list__product-price">1 200 руб.</p>
-            <a class="products-list__buy link" href="#">
-              <span class="visually-hidden">
-                Добавить в корзину.
-              </span>
+      <section class="container catalog">
+        <h2 class="visually-hidden">Список товаров</h2>
+        <ul class="catalog__section products-list">
+          <li class="products-list__item">
+            <a class="products-list__image-link">
+              <img src="https://via.placeholder.com/150x150" alt="Зайчик-попрыгайчик" width="260" height="195">
             </a>
-          </div>
-        </li>
-        <li class="products-list__item">
-          <a class="products-list__image-link">
-            <img class="image" src="https://via.placeholder.com/150x150" alt="Корзинка для белья" width="260" height="195">
-          </a>
-          <div class="products-list__group-wrapper">
-            <h3 class="products-list__product-title">Корзинка для белья</h3>
-            <p class="products-list__specifications">Диаметр 15 см, высота 10 см</p>
-            <p class="products-list__product-price">690 руб.</p>
-            <a class="products-list__buy link" href="#">
-              <span class="visually-hidden">
-                Добавить в корзину.
-              </span>
+            <div class="products-list__group-wrapper">
+              <h3 class="products-list__product-title">Зайчик-попрыгайчик</h3>
+              <p class="products-list__specifications">Рост 30 см, вес 200 г</p>
+              <p class="products-list__product-price">1 200 руб.</p>
+              <a class="products-list__buy link" href="#">
+                <span class="visually-hidden">
+                  Добавить в корзину.
+                </span>
+              </a>
+            </div>
+          </li>
+          <li class="products-list__item">
+            <a class="products-list__image-link">
+              <img src="https://via.placeholder.com/150x150" alt="Корзинка для белья" width="260" height="195">
             </a>
-          </div>
-        </li>
-        <li class="products-list__item">
-          <a class="products-list__image-link">
-            <img class="image" src="https://via.placeholder.com/150x150" alt="Большая корзинкадля игрушек" width="260" height="195">
-          </a>
-          <div class="products-list__group-wrapper">
-            <h3 class="products-list__product-title">Большая корзинка для игрушек</h3>
-            <p class="products-list__specifications">Диаметр 30 см, высота 30 см</p>
-            <p class="products-list__product-price">1 500 руб.</p>
-            <a class="products-list__buy link" href="#">
-              <span class="visually-hidden">
-                Добавить в корзину.
-              </span>
+            <div class="products-list__group-wrapper">
+              <h3 class="products-list__product-title">Корзинка для белья</h3>
+              <p class="products-list__specifications">Диаметр 15 см, высота 10 см</p>
+              <p class="products-list__product-price">690 руб.</p>
+              <a class="products-list__buy" href="#">
+                <span class="visually-hidden">
+                  Добавить в корзину.
+                </span>
+              </a>
+            </div>
+          </li>
+          <li class="products-list__item">
+            <a class="products-list__image-link">
+              <img src="https://via.placeholder.com/150x150" alt="Большая корзинкадля игрушек" width="260" height="195">
             </a>
-          </div>
-        </li>
-      </ul>
-      <section class="page-main__section production-process">
+            <div class="products-list__group-wrapper">
+              <h3 class="products-list__product-title">Большая корзинка для игрушек</h3>
+              <p class="products-list__specifications">Диаметр 30 см, высота 30 см</p>
+              <p class="products-list__product-price">1 500 руб.</p>
+              <a class="products-list__buy" href="#">
+                <span class="visually-hidden">
+                  Добавить в корзину.
+                </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="container production-process">
         <h2 class="production-process__title">Процесс производства</h2>
-        <video class="production-process__description">
-          Процесс производства
-        </video>
+        <a class="production-process__video-link" href="#">
+          <img src="https://via.placeholder.com/150x150" alt="Превью видео" width="260" height="150">
+        </a>
         <p class="production-process__description">
           По просьбам наших любимых
           фолловеров мы сняли для вас
           подробное видео о том, как
           появляются наши товары.
         </p>
-        <a class="production-process__make-order link" href="#">Сделать заказ</a>
+        <a class="production-process__make-order" href="#">Сделать заказ</a>
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="page-footer__social-networks-list social-networks-list">
-        <li class="social-networks-list__item">
-          <a class="social-networks-list__social-network link" href="#">
-            <span class="visually-hidden">Интсаграмм</span>
-          </a>
-        </li>
-        <li class="social-networks-list__item">
-          <a class="social-networks-list__social-network link" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li class="social-networks-list__item">
-          <a class="social-networks-list__social-network link" href="#">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
-        </li>
-      </ul>
-      <p class="page-footer__developer">
-        Разработано <img class="image" src="https://via.placeholder.com/150x150" alt="Сайт разработчика">
-      </p>
+      <div class="container">
+        <ul class="page-footer__social-networks-list social-networks-list">
+          <li class="social-networks-list__item">
+            <a class="social-networks-list__social-network" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="social-networks-list__item">
+            <a class="social-networks-list__social-network" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social-networks-list__item">
+            <a class="social-networks-list__social-network" href="#">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+        </ul>
+        <p class="page-footer__developer">
+          Разработано <img src="https://via.placeholder.com/150x150" alt="Сайт разработчика">
+        </p>
+      </div>
     </footer>
   </body>
 </html>
