@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Данила Боханов](https://up.htmlacademy.ru/adaptive/20/user/1185083).
-* Наставник: `Неизвестно`.
+* Наставник: [Артем Макаров](https://up.htmlacademy.ru/adaptive/20/user/429879).
 
 ---
 
