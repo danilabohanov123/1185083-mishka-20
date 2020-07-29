@@ -2,29 +2,32 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <title>HTML Academy: Мишка. Каталог.</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-main">
+  <body class="page-body">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="https://via.placeholder.com/150x150" alt="Логотип сайта" width="86" height="35">
+        <img src="img/logo-desktop.svg" alt="Логотип сайта" width="86" height="35">
       </a>
-      <button class="page-header__toggle" type="button">Открыть/закрыть</button>
+      <button class="page-header__toggle" type="button">
+        <span class="visually-hidden">Открыть/закрыть</span>
+      </button>
       <nav class="nav-main">
         <ul class="nav-main__list site-list">
           <li class="site-list__item">
-            <a>Каталог товаров</a>
+            <a class="site-list__link">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="nav-main__list user-list">
           <li class="user-list__item">
-            <a href="#">Поиск по сайту</a>
+            <a class="user-list__link" href="#">Поиск по сайту</a>
           </li>
           <li class="user-list__item">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="user-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -35,16 +38,16 @@
       </div>
       <section class="container catalog">
         <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="catalog__section products-list">
+        <ul class="products-list">
           <li class="products-list__item">
             <a class="products-list__image-link">
-              <img src="https://via.placeholder.com/150x150" alt="Зайчик-попрыгайчик" width="260" height="195">
+              <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
             </a>
             <div class="products-list__group-wrapper">
               <h3 class="products-list__product-title">Зайчик-попрыгайчик</h3>
               <p class="products-list__specifications">Рост 30 см, вес 200 г</p>
               <p class="products-list__product-price">1 200 руб.</p>
-              <a class="products-list__buy link" href="#">
+              <a class="products-list__buy" href="#">
                 <span class="visually-hidden">
                   Добавить в корзину.
                 </span>
@@ -53,7 +56,7 @@
           </li>
           <li class="products-list__item">
             <a class="products-list__image-link">
-              <img src="https://via.placeholder.com/150x150" alt="Корзинка для белья" width="260" height="195">
+              <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
             </a>
             <div class="products-list__group-wrapper">
               <h3 class="products-list__product-title">Корзинка для белья</h3>
@@ -68,7 +71,7 @@
           </li>
           <li class="products-list__item">
             <a class="products-list__image-link">
-              <img src="https://via.placeholder.com/150x150" alt="Большая корзинкадля игрушек" width="260" height="195">
+              <img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинкадля игрушек" width="260" height="195">
             </a>
             <div class="products-list__group-wrapper">
               <h3 class="products-list__product-title">Большая корзинка для игрушек</h3>
@@ -86,7 +89,7 @@
       <section class="container production-process">
         <h2 class="production-process__title">Процесс производства</h2>
         <a class="production-process__video-link" href="#">
-          <img src="https://via.placeholder.com/150x150" alt="Превью видео" width="260" height="150">
+          <img src="img/video-mobile@1x.jpg" alt="Превью видео" width="260" height="150">
         </a>
         <p class="production-process__description">
           По просьбам наших любимых
@@ -101,23 +104,26 @@
       <div class="container">
         <ul class="page-footer__social-networks-list social-networks-list">
           <li class="social-networks-list__item">
-            <a class="social-networks-list__social-network" href="#">
+            <a class="social-networks-list__link" href="#">
               <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
           <li class="social-networks-list__item">
-            <a class="social-networks-list__social-network" href="#">
+            <a class="social-networks-list__link" href="#">
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
           <li class="social-networks-list__item">
-            <a class="social-networks-list__social-network" href="#">
+            <a class="social-networks-list__link" href="#">
               <span class="visually-hidden">Твиттер</span>
             </a>
           </li>
         </ul>
         <p class="page-footer__developer">
-          Разработано <img src="https://via.placeholder.com/150x150" alt="Сайт разработчика">
+          Разработано
+          <a class="page-footer__developer-link" href="#">
+            <img src="img/htmlacademy.svg" alt="Сайт разработчика" width="27" height="34">
+          </a>
         </p>
       </div>
     </footer>
