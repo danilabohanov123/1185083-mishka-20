@@ -1,16 +1,12 @@
-.visually-hidden {
-  position: absolute;
+body {
+  min-height: 100%;
+  margin: 0;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
+  .line-size();
+  font-family: @font, "Arial", sans-serif;
+  color: @font-basic;
 
-  border: none;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  background-color: var(--basic-background);
 }
 
 img {
