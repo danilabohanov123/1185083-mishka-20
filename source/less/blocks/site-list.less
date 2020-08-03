@@ -1,9 +1,35 @@
 .site-list {
+  display: contents;
+
   list-style: none;
 }
 
+.site-list__item {
+  display: contents;
+}
+
 .site-list__link {
+  display: block;
+
   font-weight: bold;
   .line-size(17px, 24px);
   color: @font-basic;
+
+  @media (max-width: @mobile-width-only) {
+    text-align: center;
+    margin: 0 auto;
+    padding: 27px 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    max-width: 220px;
+    margin: 32px 0;
+    margin-right: 64px;
+    order: -1;
+  }
 }

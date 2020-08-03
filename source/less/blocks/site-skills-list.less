@@ -1,8 +1,35 @@
 .site-skills-list {
+  padding: 0;
+
   list-style: none;
+
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 70px;
+    grid-row-gap: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-gap: 80px;
+  }
 }
 
 .site-skills-list__item {
+  padding-top: 57px;
+
   font-weight: bold;
-  .line-size(17px, 20px);
+
+  @media (max-width: @mobile-width-only) {
+    .line-size(17px, 20px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .line-size(20px, 22px);
+  }
 }

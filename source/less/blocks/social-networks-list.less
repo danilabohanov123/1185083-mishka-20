@@ -1,3 +1,24 @@
 .social-networks-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  padding: 0;
+
   list-style: none;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
+}
+
+.social-networks-list__item {
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+}
+
+.social-networks-list .social-networks-list__item:last-child {
+  margin: 0;
 }
