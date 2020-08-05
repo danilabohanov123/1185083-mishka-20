@@ -1,8 +1,28 @@
 .site-skills-list {
+  display: block;
+  padding: 0;
+
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 70px;
+    grid-row-gap: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-gap: 80px;
+  }
 }
 
 .site-skills-list__item {
+  padding-top: 57px;
+
   font-weight: bold;
   .line-size(17px, 20px);
+
+  @media (min-width: @tablet-width) {
+    .line-size(20px, 22px);
+  }
 }

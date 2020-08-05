@@ -1,0 +1,34 @@
+.page-header__group {
+  display: contents;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 22px;
+  right: 30px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo {
+  display: block;
+  width: 86px;
+  height: 35px;
+  margin: 22px auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 32px auto;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 32px auto;
+  }
+}

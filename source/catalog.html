@@ -1,47 +1,68 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка. Каталог.</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img src="img/logo-desktop.svg" alt="Логотип сайта" width="86" height="35">
-      </a>
-      <button class="page-header__toggle" type="button">
-        <span class="visually-hidden">Открыть/закрыть</span>
-      </button>
-      <nav class="nav-main">
-        <ul class="nav-main__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link">Каталог товаров</a>
+      <div class="container page-header__group">
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-mobile.svg" alt="Логотип сайта" width="86" height="35">
+        </a>
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Открыть/закрыть</span>
+        </button>
+        <nav class="nav-main">
+          <ul class="nav-main__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="nav-main__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="extra-nav-wrapper">
+        <ul class="container extra-nav-list">
+          <li class="extra-nav-list__item">
+            <a class="extra-nav-list__link extra-nav-list__link--priority">Каталог товаров</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Вязание на заказ</a>
+          <li class="extra-nav-list__item">
+            <a class="extra-nav-list__link extra-nav-list__link--priority" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="extra-nav-list__item">
+            <a class="extra-nav-list__link extra-nav-list__link--secondary" href="#">Новые поступления</a>
+          </li>
+          <li class="extra-nav-list__item">
+            <a class="extra-nav-list__link extra-nav-list__link--secondary" href="#">Распродажа</a>
+          </li>
+          <li class="extra-nav-list__item">
+            <a class="extra-nav-list__link extra-nav-list__link--delivery" href="#">Бесплатная доставка по России</a>
           </li>
         </ul>
-        <ul class="nav-main__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__link" href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </nav>
+      </div>
     </header>
     <main class="page-main">
-      <div class="page-main__group-wrapper">
-        <h1 class="container page-title">Милые штуки ручной работы для дома</h1>
+      <div class="page-main__title-wrapper">
+        <h1 class="container page-title">Каталог товаров</h1>
       </div>
-      <section class="container catalog">
+      <section class="container products">
         <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="products-list">
+        <ul class="products__list products-list">
           <li class="products-list__item">
             <a class="products-list__image-link">
-              <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+              <img class="products-list__image" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
             </a>
             <div class="products-list__group-wrapper">
               <h3 class="products-list__product-title">Зайчик-попрыгайчик</h3>
@@ -56,7 +77,7 @@
           </li>
           <li class="products-list__item">
             <a class="products-list__image-link">
-              <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+              <img class="products-list__image" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
             </a>
             <div class="products-list__group-wrapper">
               <h3 class="products-list__product-title">Корзинка для белья</h3>
@@ -71,7 +92,7 @@
           </li>
           <li class="products-list__item">
             <a class="products-list__image-link">
-              <img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинкадля игрушек" width="260" height="195">
+              <img class="products-list__image" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинкадля игрушек" width="260" height="195">
             </a>
             <div class="products-list__group-wrapper">
               <h3 class="products-list__product-title">Большая корзинка для игрушек</h3>
@@ -101,21 +122,27 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="container">
+      <div class="container page-footer__wrapper">
+        <a class="page-footer__logo" href="index.html">
+          <img src="img/logo-footer.svg" alt="Логотип сайта" width="102" height="34">
+        </a>
         <ul class="page-footer__social-networks-list social-networks-list">
           <li class="social-networks-list__item">
             <a class="social-networks-list__link" href="#">
               <span class="visually-hidden">Инстаграм</span>
+              #
             </a>
           </li>
           <li class="social-networks-list__item">
             <a class="social-networks-list__link" href="#">
               <span class="visually-hidden">Фейсбук</span>
+              #
             </a>
           </li>
           <li class="social-networks-list__item">
             <a class="social-networks-list__link" href="#">
               <span class="visually-hidden">Твиттер</span>
+              #
             </a>
           </li>
         </ul>

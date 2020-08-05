@@ -1,9 +1,18 @@
-
 .types-list {
+  display: contents;
+
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+  }
 }
 
 .types-list__item {
+  display: contents;
+
   background-color: @product-types-basic;
 
   &--children-toys {
@@ -12,7 +21,26 @@
 }
 
 .types-list__link {
+  display: block;
+  padding-top: 24px;
+  padding-right: 160px;
+  padding-bottom: 31px;
+  padding-left: 30px;
+
   font-weight: bold;
   .line-size(19px, 24px);
   color: @background-basic;
+
+  background-color: @product-types-basic;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    padding-right: 350px;
+    padding-bottom: 34px;
+    padding-left: 37px;
+  }
+
+  &--children-toys {
+    background-color: @product-types-special;
+  }
 }
