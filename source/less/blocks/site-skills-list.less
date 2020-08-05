@@ -1,16 +1,12 @@
 .site-skills-list {
+  display: block;
   padding: 0;
 
   list-style: none;
 
-  @media (max-width: @mobile-width-only) {
-    display: block;
-  }
-
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 40% 40%;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 70px;
     grid-row-gap: 57px;
   }
@@ -24,10 +20,7 @@
   padding-top: 57px;
 
   font-weight: bold;
-
-  @media (max-width: @mobile-width-only) {
-    .line-size(17px, 20px);
-  }
+  .line-size(17px, 20px);
 
   @media (min-width: @tablet-width) {
     .line-size(20px, 22px);

@@ -1,9 +1,7 @@
 .types-list {
-  list-style: none;
+  display: contents;
 
-  @media (max-width: @mobile-width-only) {
-    display: contents;
-  }
+  list-style: none;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -24,19 +22,16 @@
 
 .types-list__link {
   display: block;
+  padding-top: 24px;
+  padding-right: 160px;
+  padding-bottom: 31px;
+  padding-left: 30px;
 
   font-weight: bold;
   .line-size(19px, 24px);
   color: @background-basic;
 
   background-color: @product-types-basic;
-
-  @media (max-width: @mobile-width-only) {
-    padding-top: 24px;
-    padding-right: 160px;
-    padding-bottom: 31px;
-    padding-left: 30px;
-  }
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;

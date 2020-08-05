@@ -3,11 +3,9 @@
 }
 
 .page-footer__wrapper {
-  @media (max-width: @mobile-width-only) {
-    display: block;
-    padding-top: 25px;
-    padding-bottom: 23px;
-  }
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -20,14 +18,14 @@
 }
 
 .page-footer__logo {
-  display: block;
+  display: none;
   width: 102px;
   height: 34px;
   margin: 0;
   padding: 0;
 
-  @media (max-width: @mobile-width-only) {
-    display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
 
@@ -41,13 +39,13 @@
   justify-content: space-between;
   align-items: center;
   width: 182px;
-  margin: 0;
+  margin: 0 auto;
+  margin-top: 50px;
 
   font-weight: bold;
   .line-size(19px, 21px);
 
-  @media (max-width: @mobile-width-only) {
-    margin: 0 auto;
-    margin-top: 50px;
+  @media (min-width: @tablet-width) {
+    margin: 0;
   }
 }

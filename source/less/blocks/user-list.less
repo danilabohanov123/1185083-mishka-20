@@ -10,23 +10,22 @@
 
 .user-list__link {
   display: block;
+  margin: 0 auto;
+  padding: 27px 30px;
 
   font-weight: bold;
   .line-size(17px, 24px);
+  text-align: center;
   color: @font-basic;
-
-  @media (max-width: @mobile-width-only) {
-    margin: 0 auto;
-    padding: 27px 30px;
-
-    text-align: center;
-  }
 
   @media (min-width: @tablet-width) {
     display: block;
     max-width: 220px;
     margin: 32px 0;
     margin-right: 64px;
+    padding: 0;
+
+    text-align: left
   }
 }
 

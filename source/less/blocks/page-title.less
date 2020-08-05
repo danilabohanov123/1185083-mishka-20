@@ -1,14 +1,10 @@
 .page-title {
+  padding-top: 74px;
+  padding-bottom: 73px;
+
   font-weight: bold;
   .line-size(27px, 30px);
   text-align: center;
-
-  @media (max-width: @mobile-width-only) {
-    padding-top: 74px;
-    padding-bottom: 73px;
-
-    .line-size(27px, 30px);
-  }
 
   @media (min-width: @tablet-width) {
     padding-top: 57px;
@@ -26,11 +22,9 @@
   }
 
   &--main-page {
-    @media (max-width: @mobile-width-only) {
-      min-height: 200px;
-      padding-top: 73px;
-      padding-bottom: 50px;
-    }
+    min-height: 200px;
+    padding-top: 73px;
+    padding-bottom: 50px;
 
     @media (min-width: @tablet-width) {
       min-height: 405px;

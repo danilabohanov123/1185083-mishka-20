@@ -1,21 +1,16 @@
 .container {
   box-sizing: content-box;
 
-  @media (max-width: @mobile-width-only) {
-    width: auto;
-    margin: 0;
-    padding: 0 30px;
-  }
+  width: auto;
+  margin: 0;
+  padding: 0 30px;
 
   @media (min-width: @tablet-width) {
-    width: auto;
-    margin: 0;
     padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width - 50px * 2;
     margin: 0 auto;
-    padding: 0 50px;
   }
 }
