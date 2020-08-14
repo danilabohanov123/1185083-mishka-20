@@ -1,7 +1,14 @@
 .extra-nav-list {
+  padding: 0;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    width: 60%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 75%;
   }
 }
 
@@ -12,7 +19,7 @@
 .extra-nav-list__link {
   max-width: 250px;
   margin-top: 24px;
-  margin-right: 60px;
+  margin-right: 5%;
 
   font-weight: bold;
   .line-size(15px, 24px);
@@ -34,11 +41,13 @@
     }
   }
 
-  &--delivery {
-    margin-left: auto;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-    font-weight: normal;
-    color: @font-section;
+  &:active {
+    opacity: 0.3;
   }
 }
 
