@@ -1,3 +1,41 @@
 .nav-main {
   display: contents;
 }
+
+.nav-main__toggle {
+  position: absolute;
+  top: 32px;
+  right: 30px;
+
+  width: 21px;
+  height: 14px;
+  padding: 0;
+
+  border: none;
+  background-color: @transparent;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: @nav-toggle;
+    box-shadow: 0 6px 0 0 @nav-toggle,
+      0 -6px 0 0 @nav-toggle;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.nav-main--no-js .nav-main__toggle {
+  display: none;
+}
