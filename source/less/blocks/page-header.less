@@ -20,6 +20,10 @@
     flex-wrap: wrap;
     width: 100%;
   }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width - 50px * 2;
+  }
 }
 
 .page-header__logo-wrapper {
@@ -43,8 +47,6 @@
 .page-header__logo {
   display: block;
   align-self: center;
-  width: 86px;
-  height: 35px;
   margin: 22px auto;
 
   @media (min-width: @tablet-width) {
@@ -53,7 +55,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 165px;
+    margin-right: 100px;
   }
 
   &:hover,
@@ -63,6 +65,16 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.page-header__logo-image {
+  @media (min-width: @tablet-width) {
+    width: 113px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
   }
 }
 
