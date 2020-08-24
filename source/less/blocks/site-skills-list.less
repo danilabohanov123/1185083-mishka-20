@@ -31,76 +31,33 @@
     .line-size(20px, 22px);
   }
 
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 32px;
+  &--ecological-material {
+    .background-image(url("../img/icon-feature-flower.svg"), 5px 32px, no-repeat);
+    background-size: 32px 37px;
   }
-}
 
-.site-skills-list__item--ecological-material {
-  &::before {
-    left: 5px;
-
-    width: 32px;
-    height: 37px;
-
-    .background-image(url("../img/icon-feature-flower.svg"), 0 0, no-repeat);
+  &--scandinavian-style {
+    .background-image(url("../img/icon-feature-money.svg"), 0 32px, no-repeat);
+    background-size: 47px 27px;
   }
-}
 
-.site-skills-list__item--scandinavian-style {
-  &::before {
-    left: 0;
-
-    width: 47px;
-    height: 27px;
-
-    .background-image(url("../img/icon-feature-money.svg"), 0 0, no-repeat);
+  &--more-likes {
+    .background-image(url("../img/icon-feature-heart.svg"), 3px 32px, no-repeat);
+    background-size: 34px 27px;
   }
-}
 
-.site-skills-list__item--more-likes {
-  &::before {
-    left: 3px;
-
-    width: 34px;
-    height: 27px;
-
-    .background-image(url("../img/icon-feature-heart.svg"), 0 0, no-repeat);
+  &--handmade-work {
+    .background-image(url("../img/icon-feature-ball.svg"), 0 32px, no-repeat);
+    background-size: 35px 34px;
   }
-}
 
-.site-skills-list__item--handmade-work {
-  &::before {
-    left: 0;
-
-    width: 35px;
-    height: 34px;
-
-    .background-image(url("../img/icon-feature-ball.svg"), 0 0, no-repeat);
+  &--manufacturer {
+    .background-image(url("../img/icon-feature-rocket.svg"), -2px 32px, no-repeat);
+    background-size: 55px 23px;
   }
-}
 
-.site-skills-list__item--manufacturer {
-  &::before {
-    left: -2px;
-
-    width: 55px;
-    height: 23px;
-
-    .background-image(url("../img/icon-feature-rocket.svg"), 0 0, no-repeat);
-  }
-}
-
-.site-skills-list__item--gift-wrapping {
-  &::before {
-    left: 0;
-
-    width: 33px;
-    height: 32px;
-
-    .background-image(url("../img/icon-feature-gift.svg"), 0 0, no-repeat);
+  &--gift-wrapping {
+    .background-image(url("../img/icon-feature-gift.svg"), 0 32px, no-repeat);
+    background-size: 33px 32px;
   }
 }

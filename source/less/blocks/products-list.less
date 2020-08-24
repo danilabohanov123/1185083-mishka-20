@@ -151,10 +151,8 @@
   right: 27px;
   bottom: 32px;
 
-  width: 21px;
-  height: 19px;
+  display: block;
 
-  .background-image(url("../img/icon-cart.svg"), 0 0, no-repeat);
   opacity: 0.2;
 
   @media (min-width: @tablet-width) {
@@ -163,11 +161,21 @@
 
   &:hover,
   &focus {
-    .background-image(url("../img/icon-cart-hover.svg"), 0 0, no-repeat);
     opacity: 1;
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.products-list__icon-cart {
+  display: block;
+  width: 21px;
+  height: 19px;
+}
+
+.products-list__buy:hover .products-list__icon-cart,
+.products-list__buy:focus .products-list__icon-cart {
+  fill: @product-types-basic;
 }
