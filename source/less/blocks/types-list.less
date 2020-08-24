@@ -73,59 +73,57 @@
 }
 
 .types-list__link--interior-items {
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 23px;
-    right: 36px;
-
-    width: 40px;
-    height: 62px;
-
-    .background-image(url("../img/icon-interior.svg"), 0 0, no-repeat);
-    opacity: 0.5;
-
-    @media (min-width: @tablet-width) {
-      top: 30px;
-    }
-  }
-
   &:hover,
   &:focus {
     background-color: @product-types-hover;
   }
 }
 
+.types-list__icon-interior {
+  position: absolute;
+  top: 23px;
+  right: 36px;
+
+  display: block;
+  width: 40px;
+  height: 62px;
+
+  fill: @product-types-icons;
+  opacity: 0.5;
+
+  @media (min-width: @tablet-width) {
+    top: 30px;
+  }
+}
+
 .types-list__link--children-toys {
   background-color: @product-types-special;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 21px;
-    right: 27px;
-
-    width: 60px;
-    height: 60px;
-
-    .background-image(url("../img/icon-toy.svg"), 0 0, no-repeat);
-    opacity: 0.5;
-
-    @media (min-width: @tablet-width) {
-      top: 31px;
-      right: 33px;
-    }
-
-    @media (min-width: @desktop-width) {
-      right: 35px;
-    }
-  }
 
   &:hover,
   &:focus {
     background-color: @product-types-active;
+  }
+}
+
+.types-list__icon-toy {
+  position: absolute;
+  top: 21px;
+  right: 27px;
+
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  fill: @product-types-icons;
+  opacity: 0.5;
+
+  @media (min-width: @tablet-width) {
+    top: 31px;
+    right: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 35px;
   }
 }
 
@@ -136,14 +134,16 @@
   @media (min-width: @tablet-width) {
     min-height: 75px;
   }
-
-  &::after {
-    opacity: 0.7;
-  }
 }
 
-.types-list__link:active {
-  &::after {
-    opacity: 0.3;
-  }
+.types-list__link:hover .types-list__icon-interior,
+.types-list__link:focus .types-list__icon-interior,
+.types-list__link:hover .types-list__icon-toy,
+.types-list__link:focus .types-list__icon-toy {
+  opacity: 0.7;
+}
+
+.types-list__link:active .types-list__icon-interior,
+.types-list__link:active .types-list__icon-toy {
+  opacity: 0.3;
 }
