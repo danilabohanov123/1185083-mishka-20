@@ -79,7 +79,7 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  styles, html, scripts, server, watcher
 );
 
 //Making sprite
