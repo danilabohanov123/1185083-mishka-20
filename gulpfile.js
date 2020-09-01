@@ -11,6 +11,8 @@ const imagemin = require("gulp-imagemin");
 const toWebp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const htmlmin = require("gulp-htmlmin");
+const minify = require('gulp-minify');
 
 // Styles
 
@@ -26,18 +28,38 @@ const styles = () => {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+//HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
+
+exports.html = html;
+
+//scripts
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(minify())
+  .pipe(rename("scripts.min.css"))
+  .pipe(gulp.dest('build/js'))
+}
+
+exports.scripts = scripts;
 
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -52,7 +74,8 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/*.js", gulp.series("scripts"));
 }
 
 exports.default = gulp.series(
@@ -79,6 +102,7 @@ const images = () => {
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo(),
     ]))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.images = images;
@@ -88,7 +112,7 @@ exports.images = images;
 const webp = () => {
   return gulp.src("source/img/**/*.{png, jpg}")
   .pipe(toWebp({quality: 90}))
-  .pipe(gulp.dest("source/img"))
+  .pipe(gulp.dest("build/img"))
 }
 
 exports.webp = webp;
@@ -97,10 +121,8 @@ exports.webp = webp;
 
 const copy = () => {
   return gulp.src([
-    "source/*.html",
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -124,6 +146,8 @@ const build = gulp.series(
   clean,
   copy,
   styles,
+  html,
+  scripts,
   sprite
 );
 
