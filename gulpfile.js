@@ -65,6 +65,7 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
+  watcher();
   done();
 }
 
@@ -157,7 +158,8 @@ exports.build = build;
 
 const start = gulp.series(
   build,
-  server
+  server,
+  watcher
 );
 
 exports.start = start;
