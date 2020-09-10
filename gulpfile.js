@@ -12,7 +12,7 @@ const toWebp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
-const minify = require('gulp-minify');
+const minify = require("gulp-minify");
 
 // Styles
 
@@ -46,10 +46,10 @@ exports.html = html;
 //scripts
 
 const scripts = () => {
-  return gulp.src('source/js/*.js')
+  return gulp.src("source/js/*.js")
   .pipe(minify())
   .pipe(rename("scripts.min.js"))
-  .pipe(gulp.dest('build/js'))
+  .pipe(gulp.dest("build/js"))
 }
 
 exports.scripts = scripts;
