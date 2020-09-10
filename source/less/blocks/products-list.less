@@ -23,7 +23,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -46,6 +47,7 @@
   padding: 25px 30px;
 
   border: 1px solid @border-table;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -56,8 +58,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: block;
     box-sizing: content-box;
+    display: block;
+    flex-grow: 1;
     min-height: 0;
     padding: 26px 27px;
     padding-right: 34px;
@@ -160,7 +163,7 @@
   }
 
   &:hover,
-  &focus {
+  &:focus {
     opacity: 1;
   }
 

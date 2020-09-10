@@ -48,7 +48,7 @@ exports.html = html;
 const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(minify())
-  .pipe(rename("scripts.min.css"))
+  .pipe(rename("scripts.min.js"))
   .pipe(gulp.dest('build/js'))
 }
 
@@ -71,18 +71,6 @@ const server = (done) => {
 
 exports.server = server;
 
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
-  gulp.watch("source/js/*.js", gulp.series("styles"));
-}
-
-exports.default = gulp.series(
-  styles, html, scripts, server, watcher
-);
-
 //Making sprite
 
 const sprite = () => {
@@ -94,6 +82,19 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
+  gulp.watch("source/js/*.js", gulp.series("scripts"));
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite"));
+}
+
+exports.default = gulp.series(
+  styles, html, scripts, sprite, server, watcher
+);
+
 // Images optimization
 
 const images = () => {
@@ -103,7 +104,7 @@ const images = () => {
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo(),
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("source/img"))
 }
 
 exports.images = images;
@@ -113,7 +114,7 @@ exports.images = images;
 const webp = () => {
   return gulp.src("source/img/**/*.{png, jpg}")
   .pipe(toWebp({quality: 90}))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("source/img"))
 }
 
 exports.webp = webp;

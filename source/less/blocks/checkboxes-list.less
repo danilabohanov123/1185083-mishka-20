@@ -1,3 +1,31 @@
 .checkboxes-list {
+  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 45px;
+
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 57px;
+    grid-column-gap: 10px;
+    padding: 50px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.checkboxes-list__item {
+  margin-bottom: 23px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }

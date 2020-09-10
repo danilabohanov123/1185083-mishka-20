@@ -2,6 +2,9 @@
   position: relative;
 
   display: contents;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -59,12 +62,25 @@
 
   background-color: @product-types-basic;
 
+  &:hover,
+  &:focus {
+    outline: none;
+    padding-top: 19px;
+    padding-bottom: 41px;
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 70px;
     padding-top: 25px;
     padding-right: 150px;
     padding-bottom: 34px;
     padding-left: 37px;
+
+    &:hover,
+    &:focus {
+      padding-top: 20px;
+      padding-bottom: 44px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -124,15 +140,6 @@
 
   @media (min-width: @desktop-width) {
     right: 35px;
-  }
-}
-
-.types-list__link:hover,
-.types-list__link:focus {
-  min-height: 53px;
-
-  @media (min-width: @tablet-width) {
-    min-height: 75px;
   }
 }
 
