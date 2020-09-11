@@ -22,10 +22,12 @@ if (modal) {
     });
   }
 
-  buyLink.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    modal.classList.add('modal-buy-product--show');
-  });
+  if (buyLink) {
+    buyLink.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      modal.classList.add('modal-buy-product--show');
+    });
+  }
 
   modalClose.addEventListener('click', function (evt) {
     evt.preventDefault();
