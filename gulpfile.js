@@ -13,8 +13,8 @@ var svgstore = require("gulp-svgstore");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
-var posthtml = require('gulp-posthtml');
-var include = require('posthtml-include');
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 
 // Styles
 

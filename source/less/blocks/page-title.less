@@ -8,6 +8,8 @@
   .line-size(27px, 30px);
   text-align: center;
 
+  background-color: inherit;
+
   @media (min-width: @tablet-width) {
     padding-top: 57px;
     padding-bottom: 85px;
@@ -69,21 +71,23 @@
     height: 24px;
 
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
 
     @media (min-width: @tablet-width) {
-      .background-image(url("../img/bg-zigzag-fill.svg"), 0 0, repeat);
+      .background-image(url("../img/bg-zigzag-fill-tablet.svg"), 0 0, repeat);
       background-size: auto 24px;
     }
 
     @media (min-width: @desktop-width) {
+      bottom: 0;
       left: 50%;
       transform: translateX(-50%);
 
       width: @desktop-width;
       height: 34px;
 
+      .background-image(url("../img/bg-zigzag-fill-desktop.svg"), 0 0, repeat);
       background-size: auto 34px;
     }
   }
