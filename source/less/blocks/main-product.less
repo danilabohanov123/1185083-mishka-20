@@ -1,4 +1,6 @@
 .main-product {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   padding-top: 31px;
@@ -8,21 +10,55 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding-top: 40px;
+    padding-top: 42px;
     padding-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
 
-    margin-top: 50px;
-    padding-top: 61px;
+    margin-top: 55px;
+    padding-top: 59px;
     padding-bottom: 75px;
 
     .background-image(url("../img/triple-set-desktop@1x.jpg"), 575px 0, no-repeat);
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/triple-set-desktop@2x.jpg");
+      background-size: 525px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+
+    content: "";
+
+    width: 100%;
+    height: 6px;
+
+    .background-image(url("../img/bg-zigzag-line.svg"), 0 0, repeat);
+    background-size: auto 6px;
+
+    @media (min-width: @tablet-width) {
+      bottom: -12px;
+
+      height: 16px;
+
+      background-size: auto 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: -19px;
+      left: 50px;
+
+      width: @desktop-width - 100px;
+
+      height: 21px;
+
+      background-size: auto 21px;
     }
   }
 }
@@ -58,19 +94,23 @@
 
   font-weight: bold;
   .line-size(17px, 20px);
+  text-align: left;
   text-transform: uppercase;
-  text-align: center;
   color: @product-types-basic;
 
   @media (min-width: @tablet-width) {
     width: 130px;
     margin: 0;
+    margin-bottom: 2px;
+
+    .line-size(17px, 17px);
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 69px;
-    left: 82px;
+    left: 67px;
   }
 }
 
@@ -96,7 +136,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 47%;
+    width: 44%;
   }
 
   @media (min-width: @desktop-width) {
@@ -120,21 +160,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 35px;
+    margin-top: 37px;
   }
 }
 
 .main-product__specifications-table {
-  margin: 28px 0;
+  margin: 20px 0;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 48px;
-    margin-bottom: 57px;
+    margin-top: 37px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 60px;
-    margin-bottom: 109px;
+    margin-top: 53px;
+    margin-bottom: 110px;
   }
 }
 
@@ -144,6 +185,7 @@
   order: 1;
 
   @media (min-width: @tablet-width) {
+    margin-top: 12px;
     order: 0;
   }
 
@@ -163,6 +205,7 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     margin-bottom: 33px;
+    padding-right: 4px;
     order: 0;
 
     .line-size(20px, 24px);
@@ -171,11 +214,11 @@
 
 .main-product__buy {
   display: block;
-  padding: 16px;
+  padding: 14px;
   order: 2;
 
   font-weight: bold;
-  .line-size(17px, 20px);
+  .line-size(18px, 20px);
   text-align: center;
   text-transform: uppercase;
   color: inherit;
@@ -184,6 +227,8 @@
 
   @media (min-width: @tablet-width) {
     order: 0;
+
+    .line-size(17px, 20px);
   }
 
   &:hover,

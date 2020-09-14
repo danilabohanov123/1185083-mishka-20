@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
-    <object style="display: none;" data="img/sprite.svg" type="image/svg+xml"></object>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="container page-header__group">
@@ -38,8 +40,10 @@
             <ul class="nav-main__list user-list">
               <li class="user-list__item">
                 <a class="user-list__link user-list__link--search" href="#">
-                  <svg class="user-list__icon-search" width="21" height="19" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  <svg class="user-list__icon-search" width="21" height="19"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true">
+                    <use xlink:href="#icon-search"></use>
                   </svg>
                   <span class="user-list__span visually-hidden">
                     Поиск по сайту
@@ -48,8 +52,10 @@
               </li>
               <li class="user-list__item">
                 <a class="user-list__link user-list__link--cart" href="#">
-                  <svg class="user-list__icon-cart" width="21" height="19" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <svg class="user-list__icon-cart" width="21" height="19"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true">
+                    <use xlink:href="#icon-cart"></use>
                   </svg>
                   Корзина: пока пуста
                 </a>
@@ -58,7 +64,7 @@
           </nav>
         </div>
       </div>
-      <div class="page-header__inner">
+      <div class="page-header__inner page-header__inner--no-background">
         <div class="container page-header__links-wrapper">
           <ul class="page-header__extra-nav extra-nav-list">
             <li class="extra-nav-list__item">
@@ -74,191 +80,180 @@
               <a class="extra-nav-list__link extra-nav-list__link--secondary" href="#">Распродажа</a>
             </li>
           </ul>
-          <ul class="page-header__services services-list">
-            <li class="services-list__item">
-              <a class="services-list__link" href="#">Бесплатная доставка по России</a>
-            </li>
-          </ul>
+          <p class="page-header__service">Бесплатная доставка по России</p>
         </div>
       </div>
     </header>
     <main class="page-main">
-      <div class="page-main__group-wrapper">
+      <div class="page-main__group-wrapper page-main__group-wrapper--no-background">
         <h1 class="container page-title">Вязание на заказ</h1>
       </div>
       <section class=" make-order">
         <h2 class="visually-hidden">Сделайте заказ</h2>
-        <div class="container">
-          <p class="make-order__description">
-            Мы будем рады воплотить в жизнь
-            ваши пожелания! Заполните простую
-            форму заказа и мы свяжемся с вами,
-            чтобы уточнить детали.
-          </p>
-        </div>
+        <p class="container make-order__description">
+          Мы будем рады воплотить в жизнь
+          ваши пожелания! Заполните простую
+          форму заказа и мы свяжемся с вами,
+          чтобы уточнить детали.
+        </p>
         <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="container">
-            <fieldset class="order-form__fieldset">
-              <legend class="order-form__legend">
-                <span class="order-form__span">Тип</span>
-              </legend>
-              <ul class="order-form__types-list radio-list">
-                <li class="radio-list__item">
-                  <input class="radio-list__input visually-hidden" type="radio" id="interior-accessory" name="type" value="interior-accessory" checked>
-                  <label class="order-form__label" for="interior-accessory">
-                    <svg class="order-form__radio" width="42" height="42" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#icon-radio"></use>
-                    </svg>
-                    Аксессуар для интерьера
-                  </label>
-                </li>
-                <li class="radio-list__item">
-                  <input class="radio-list__input visually-hidden" type="radio" id="children-toy" name="type" value="children-toy">
-                  <label class="order-form__label" for="children-toy">
-                    <svg class="order-form__radio" width="42" height="42" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#icon-radio"></use>
-                    </svg>
-                    Детская игрушка
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+          <fieldset class="container order-form__fieldset">
+            <legend class="order-form__legend order-form__legend--radio">
+              <span class="order-form__span">Тип</span>
+            </legend>
+            <ul class="order-form__types-list radio-list">
+              <li class="radio-list__item">
+                <input class="radio-list__input visually-hidden" type="radio" id="interior-accessory" name="type" value="interior-accessory" checked>
+                <label class="order-form__label" for="interior-accessory">
+                  <svg class="order-form__radio" width="42" height="42" aria-hidden="true">
+                    <use xlink:href="#icon-radio"></use>
+                  </svg>
+                  Аксессуар для интерьера
+                </label>
+              </li>
+              <li class="radio-list__item">
+                <input class="radio-list__input visually-hidden" type="radio" id="children-toy" name="type" value="children-toy">
+                <label class="order-form__label" for="children-toy">
+                  <svg class="order-form__radio" width="42" height="42" aria-hidden="true">
+                    <use xlink:href="#icon-radio"></use>
+                  </svg>
+                  Детская игрушка
+                </label>
+              </li>
+            </ul>
+          </fieldset>
           <div class="order-form__background-item">
-            <div class="container">
-              <fieldset class="order-form__fieldset">
-                <legend class="order-form__legend">
-                  <span class="order-form__span">Цвет</span>
-                </legend>
-                <ul class="order-form__colors-list checkboxes-list">
-                  <li class="checkboxes-list__item">
-                    <input class="checkboxes-list__input visually-hidden" type="checkbox" id="white" name="color" value="white" checked>
-                    <label class="order-form__label" for="white">
-                      <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
-                      </svg>
-                      Белый
-                    </label>
-                  </li>
-                  <li class="checkboxes-list__item">
-                    <input class="checkboxes-list__input visually-hidden" type="checkbox" id="gray" name="color" value="gray" checked>
-                    <label class="order-form__label" for="gray">
-                      <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
-                      </svg>
-                      Серый
-                    </label>
-                  </li>
-                  <li class="checkboxes-list__item">
-                    <input class="checkboxes-list__input visually-hidden" type="checkbox" id="tiffani" name="color" value="tiffani">
-                    <label class="order-form__label" for="tiffani">
-                      <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
-                      </svg>
-                      «Тиффани»
-                    </label>
-                  </li>
-                  <li class="checkboxes-list__item">
-                    <input class="checkboxes-list__input visually-hidden" type="checkbox" id="black" name="color" value="black">
-                    <label class="order-form__label" for="black">
-                      <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
-                      </svg>
-                      Черный
-                    </label>
-                  </li>
-                  <li class="checkboxes-list__item">
-                    <input class="checkboxes-list__input visually-hidden" type="checkbox" id="pink" name="color" value="pink">
-                    <label class="order-form__label" for="pink">
-                      <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
-                      </svg>
-                      Розовый
-                    </label>
-                  </li>
-                  <li class="checkboxes-list__item">
-                    <input class="checkboxes-list__input visually-hidden" type="checkbox" id="orange" name="color" value="orange">
-                    <label class="order-form__label" for="orange">
-                      <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
-                      </svg>
-                      Оранжевый
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-            </div>
-          </div>
-          <div class="container">
-            <fieldset class="order-form__fieldset">
+            <fieldset class="container order-form__fieldset">
               <legend class="order-form__legend">
-                <span class="order-form__span">Фио</span>
+                <span class="order-form__span">Цвет</span>
               </legend>
-              <ul class="order-form__name-list name-list">
-                <li class="name-list__item">
-                  <label class="order-form__label" for="first-name">Имя:</label>
-                  <input class="name-list__input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
+              <ul class="order-form__colors-list checkboxes-list">
+                <li class="checkboxes-list__item">
+                  <input class="checkboxes-list__input visually-hidden" type="checkbox" id="white" name="color" value="white" checked>
+                  <label class="order-form__label" for="white">
+                    <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
+                      <use xlink:href="#icon-checkbox"></use>
+                    </svg>
+                    Белый
+                  </label>
                 </li>
-                <li class="name-list__item">
-                  <label class="order-form__label" for="second-name">Фамилия:</label>
-                  <input class="name-list__input" type="text" id="second-name" name="second-name" placeholder="Укажите фамилию*" required>
+                <li class="checkboxes-list__item">
+                  <input class="checkboxes-list__input visually-hidden" type="checkbox" id="gray" name="color" value="gray" checked>
+                  <label class="order-form__label" for="gray">
+                    <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
+                      <use xlink:href="#icon-checkbox"></use>
+                    </svg>
+                    Серый
+                  </label>
                 </li>
-                <li class="name-list__item">
-                  <label class="order-form__label" for="patronymic">Отчество:</label>
-                  <input class="name-list__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+                <li class="checkboxes-list__item">
+                  <input class="checkboxes-list__input visually-hidden" type="checkbox" id="tiffani" name="color" value="tiffani">
+                  <label class="order-form__label" for="tiffani">
+                    <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
+                      <use xlink:href="#icon-checkbox"></use>
+                    </svg>
+                    «Тиффани»
+                  </label>
+                </li>
+                <li class="checkboxes-list__item">
+                  <input class="checkboxes-list__input visually-hidden" type="checkbox" id="black" name="color" value="black">
+                  <label class="order-form__label" for="black">
+                    <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
+                      <use xlink:href="#icon-checkbox"></use>
+                    </svg>
+                    Черный
+                  </label>
+                </li>
+                <li class="checkboxes-list__item">
+                  <input class="checkboxes-list__input visually-hidden" type="checkbox" id="pink" name="color" value="pink">
+                  <label class="order-form__label" for="pink">
+                    <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
+                      <use xlink:href="#icon-checkbox"></use>
+                    </svg>
+                    Розовый
+                  </label>
+                </li>
+                <li class="checkboxes-list__item">
+                  <input class="checkboxes-list__input visually-hidden" type="checkbox" id="orange" name="color" value="orange">
+                  <label class="order-form__label" for="orange">
+                    <svg class="order-form__checkbox" width="38" height="38" aria-hidden="true">
+                      <use xlink:href="#icon-checkbox"></use>
+                    </svg>
+                    Оранжевый
+                  </label>
                 </li>
               </ul>
             </fieldset>
           </div>
+          <fieldset class="container order-form__fieldset">
+            <legend class="order-form__legend">
+              <span class="order-form__span">Фио</span>
+            </legend>
+            <ul class="order-form__name-list name-list">
+              <li class="name-list__item">
+                <label class="order-form__label name-list__label" for="first-name">Имя:</label>
+                <input class="name-list__input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
+              </li>
+              <li class="name-list__item">
+                <label class="order-form__label name-list__label" for="second-name">Фамилия:</label>
+                <input class="name-list__input" type="text" id="second-name" name="second-name" placeholder="Укажите фамилию*" required>
+              </li>
+              <li class="name-list__item">
+                <label class="order-form__label name-list__label" for="patronymic">Отчество:</label>
+                <input class="name-list__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+              </li>
+            </ul>
+          </fieldset>
           <div class="order-form__background-item">
             <div class="container order-form__contacts-wrapper">
               <p class="order-form__fieldset order-form__fieldset--contact">
-                <label class="order-form__legend" for="tel">
+                <label class="order-form__legend order-form__legend--communication" for="tel">
                   <span class="order-form__span">Тел</span>
                 </label>
-                <input class="order-form__input" type="tel" id="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="(\+7)\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
+                <input class="order-form__input order-form__input--communication" type="tel" id="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="(\+7)\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
                 <svg class="order-form__icon" width="25" height="24" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  <use xlink:href="#icon-phone"></use>
                 </svg>
               </p>
               <p class="order-form__fieldset order-form__fieldset--contact">
-                <label class="order-form__legend" for="e-mail">
+                <label class="order-form__legend order-form__legend--communication" for="e-mail">
                   <span class="order-form__span">E-mail</span>
                 </label>
-                <input class="order-form__input" type="email" id="e-mail" name="e-mail" placeholder="Ваш Email*" required>
+                <input class="order-form__input order-form__input--communication" type="email" id="e-mail" name="e-mail" placeholder="Ваш Email*" required>
                 <svg class="order-form__icon order-form__icon--mail" width="32" height="32" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  <use xlink:href="#icon-mail"></use>
                 </svg>
               </p>
             </div>
           </div>
-          <div class="container">
-            <p class="order-form__fieldset order-form__fieldset--textarea">
-              <label class="order-form__legend" for="extra">
-                <span class="order-form__span">Доп</span>
-              </label>
-              <textarea class="order-form__textarea" id="extra" name="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            </p>
-            <div class="order-form__sumbit-wrapper">
-              <p class="order-form__explanation">*Поля обязательны для заполнения</p>
-              <button class="order-form__sumbit" type="submit">Отправить заказ</button>
-            </div>
+          <p class="container order-form__fieldset order-form__fieldset--textarea">
+            <label class="order-form__legend" for="extra">
+              <span class="order-form__span">Доп</span>
+            </label>
+            <textarea class="order-form__textarea" id="extra" name="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </p>
+          <div class="container order-form__submit-wrapper">
+            <p class="order-form__explanation">*Поля обязательны для заполнения</p>
+            <button class="order-form__submit" type="submit">Отправить заказ</button>
           </div>
         </form>
       </section>
     </main>
     <footer class="page-footer">
       <div class="container page-footer__wrapper">
-        <a class="page-footer__logo" href="index.html" aria-label="Логотип сайта">
+        <a class="page-footer__logo" href="index.html">
+          <span class="visually-hidden">
+            Логотип сайта
+          </span>
           <svg class="page-footer__icon-logo" width="102px" height="34px" aria-hidden="true">
-            <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
+            <use xlink:href="#icon-logo-footer"></use>
           </svg>
         </a>
         <ul class="page-footer__social-networks-list social-networks-list">
           <li class="social-networks-list__item">
             <a class="social-networks-list__link social-networks-list__link--insta" href="#">
               <svg class="social-networks-list__icon-insta" width="22px" height="21px" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-insta"></use>
+                <use xlink:href="#icon-insta"></use>
               </svg>
               <span class="visually-hidden">Инстаграм</span>
             </a>
@@ -266,7 +261,7 @@
           <li class="social-networks-list__item">
             <a class="social-networks-list__link social-networks-list__link--fb" href="#">
               <svg class="social-networks-list__icon-fb" width="15" height="29px" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-fb"></use>
+                <use xlink:href="#icon-fb"></use>
               </svg>
               <span class="visually-hidden">Фейсбук</span>
             </a>
@@ -275,7 +270,7 @@
             <a class="social-networks-list__link social-networks-list__link--tw" href="#">
               <span class="visually-hidden">Твиттер</span>
               <svg class="social-networks-list__icon-tw" width="52" height="20px" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -284,7 +279,7 @@
           Разработано
           <a class="page-footer__developer-link" href="#">
             <svg class="page-footer__icon-developer" width="27" height="34" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
             <span class="visually-hidden">Cсылка на сайт разработчика</span>
           </a>

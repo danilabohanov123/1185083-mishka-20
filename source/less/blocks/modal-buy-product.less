@@ -44,18 +44,18 @@
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 28px;
+  padding-top: 29px;
   padding-right: 30px;
   padding-left: 30px;
-  padding-bottom: 47px;
+  padding-bottom: 46px;
 
   @media (min-width: @tablet-width) {
     top: 120px;
 
     width: 566px;
-    padding-top: 37px;
-    padding-right: 92px;
-    padding-left: 92px;
+    padding-top: 48px;
+    padding-right: 105px;
+    padding-left: 105px;
     padding-bottom: 46px;
   }
 }
@@ -70,19 +70,19 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    .line-size(30px, 57px);
+    .line-size(30px, 35px);
   }
 }
 
 .modal-buy-product__notification {
   margin-top: 14px;
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 
   .line-size(15px, 30px);
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-top: 11px;
+    margin-top: 24px;
     margin-bottom: 19px;
 
     .line-size(17px, 30px);
@@ -99,6 +99,10 @@
   grid-gap: 7px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 3px;
+  }
 }
 
 .modal-buy-product__size {
@@ -106,7 +110,7 @@
 }
 
 .modal-buy-product__label {
-  padding: 18px 3px;
+  padding: 15px 3px;
 
   .line-size(17px, 19px);
   color: @font-basic;
@@ -125,11 +129,11 @@
   border-color: @product-types-basic;
 }
 
-.modal-buy-product__sumbit {
+.modal-buy-product__submit {
   display: block;
   width: 100%;
   margin-top: 31px;
-  padding: 18px;
+  padding: 16px;
 
   font-family: inherit;
   font-weight: bold;
@@ -149,6 +153,13 @@
 
   &:active {
     background-color: @link-hover;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 29px;
+    margin-right: 3px;
+    margin-left: 3px;
+    width: 348px;
   }
 }
 

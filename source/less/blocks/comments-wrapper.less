@@ -10,6 +10,12 @@
     }
   }
 
+  @media (min-width: @desktop-width) {
+    padding-bottom: 50px;
+
+    background-position-x: 50px;
+  }
+
   &::after {
     position: absolute;
     right: 0;
@@ -24,13 +30,19 @@
     background-size: auto 6px;
 
     @media (min-width: @tablet-width) {
-      height: 17px;
-      background-size: auto 17px;
+      height: 16px;
+
+      background-size: auto 16px;
     }
 
     @media (min-width: @desktop-width) {
-      height: 23px;
-      background-size: auto 23px;
+      right: 50px;
+      bottom: -2px;
+
+      width: @desktop-width - 100px;
+      height: 21px;
+
+      background-size: auto 21px;
     }
   }
 }

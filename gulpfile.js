@@ -1,18 +1,20 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const less = require("gulp-less");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
-const csso = require("gulp-csso");
-const rename = require("gulp-rename");
-const imagemin = require("gulp-imagemin");
-const toWebp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
-const del = require("del");
-const htmlmin = require("gulp-htmlmin");
-const minify = require("gulp-minify");
+var gulp = require("gulp");
+var plumber = require("gulp-plumber");
+var sourcemap = require("gulp-sourcemaps");
+var less = require("gulp-less");
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var sync = require("browser-sync").create();
+var csso = require("gulp-csso");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var toWebp = require("gulp-webp");
+var svgstore = require("gulp-svgstore");
+var del = require("del");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
+var posthtml = require('gulp-posthtml');
+var include = require('posthtml-include');
 
 // Styles
 
@@ -37,6 +39,9 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
@@ -47,10 +52,10 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
-  .pipe(minify())
-  .pipe(rename("scripts.min.js"))
-  .pipe(gulp.dest("build/js"))
-}
+    .pipe(uglify())
+    .pipe(rename("scripts.min.js"))
+    .pipe(gulp.dest("build/js"));
+};
 
 exports.scripts = scripts;
 
@@ -148,9 +153,9 @@ const build = gulp.series(
   clean,
   copy,
   styles,
+  sprite,
   html,
-  scripts,
-  sprite
+  scripts
 );
 
 exports.build = build;

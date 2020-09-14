@@ -48,22 +48,25 @@
   display: block;
   align-self: center;
   margin: 22px auto;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    margin-top: 8px;
     margin-right: auto;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 100px;
+    margin-right: 87px;
+    margin-left: 37px;
   }
 
-  &[href]:hover,
-  &[href]:focus {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
-  &[href]:active {
+  &:active {
     opacity: 0.3;
   }
 }
@@ -79,12 +82,16 @@
 }
 
 .page-header__inner {
-  background-color: @background-specail;
+  background-color: @background-special;
   display: none;
 
   @media (min-width: @tablet-width) {
     display: block;
     width: 100%;
+  }
+
+  &--no-background {
+    background-color: @background-footer;
   }
 }
 
@@ -99,6 +106,14 @@
   margin: 0;
 }
 
-.page-header__services {
+.page-header__service {
   margin: 0;
+  margin-top: 24px;
+
+  .line-size(15px, 24px);
+  color: @font-section;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
 }

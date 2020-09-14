@@ -30,17 +30,21 @@
   }
 }
 
-.page-footer__logo[href]:hover .page-footer__icon-logo,
-.page-footer__logo[href]:focus .page-footer__icon-logo {
+.page-footer__logo:hover .page-footer__icon-logo,
+.page-footer__logo:focus .page-footer__icon-logo {
   fill: @product-types-active;
 }
 
-.page-footer__logo[href]:active .page-footer__icon-logo {
+.page-footer__logo:active .page-footer__icon-logo {
   opacity: 0.3;
 }
 
 .page-footer__social-networks-list {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 75px;
+  }
 }
 
 .page-footer__developer {
@@ -50,7 +54,7 @@
   align-items: center;
   width: 182px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 49px;
 
   font-weight: bold;
   .line-size(19px, 21px);

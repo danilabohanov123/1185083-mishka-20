@@ -3,20 +3,32 @@
   color: @font-section;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    display: block;
 
-    font-size: 17px;
+    .line-size(17px, 30px);
   }
 
   @media (min-width: @desktop-width) {
     display: table;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .contacts-table__body {
   display: contents;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 49.5% 49%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: contents;
+  }
 }
 
 .contacts-table__link {
@@ -42,6 +54,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
@@ -50,8 +63,9 @@
 }
 
 .contacts-table__type {
-  padding-right: 25px;
-  padding-bottom: 50px;
+  width: 80px;
+  padding: 0;
+  padding-bottom: 25px;
 
   vertical-align: top;
 
@@ -62,13 +76,13 @@
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     display: block;
-    width: 80px;
-    padding-right: 10px;
+    width: 75px;
+    padding-right: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: table-cell;
-    width: 80px;
+    width: 72px;
     padding-bottom: 30px;
   }
 }
@@ -84,7 +98,7 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    width: 240px;
+    width: 250px;
   }
 
   @media (min-width: @desktop-width) {
@@ -94,7 +108,7 @@
   }
 }
 
-.contacts-table__wrpapper {
+.contacts-table__wrapper {
   @media (min-width: @desktop-width) {
     display: contents;
   }
