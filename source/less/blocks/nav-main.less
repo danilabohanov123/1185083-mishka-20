@@ -69,3 +69,10 @@
     transform: rotate(-45deg);
   }
 }
+
+.nav-main--no-js .nav-main__list,
+.nav-main--show .nav-main__list {
+  @media (max-width: @tablet-width - 1) {
+    display: contents;
+  }
+}

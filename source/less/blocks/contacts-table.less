@@ -39,11 +39,12 @@
   &:hover,
   &:focus {
     color: @product-types-active;
-    text-decoration-color: @product-types-active;
+
+    border-bottom-color: @product-types-active;
   }
 
   &:active {
-    text-decoration: none;
+    border-bottom-color: @border-email-active;
   }
 
   @media (min-width: @desktop-width) {

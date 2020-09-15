@@ -169,16 +169,16 @@
   }
 }
 
-.radio-list__input:checked + .order-form__label .order-form__radio {
+.order-form__radio-input:checked + .order-form__label .order-form__radio {
   fill: @product-types-basic;
 }
 
 .order-form__label:hover .order-form__radio,
-.radio-list__input:focus + .order-form__label .order-form__radio {
+.order-form__radio-input:focus + .order-form__label .order-form__radio {
   stroke: @product-types-basic;
 }
 
-.radio-list__input:active + .order-form__label .order-form__radio {
+.order-form__radio-input:active + .order-form__label .order-form__radio {
   stroke: @font-basic;
   stroke-opacity: 0.3;
 }
@@ -202,23 +202,23 @@
   }
 }
 
-.checkboxes-list__input:checked + .order-form__label .order-form__checkbox {
+.order-form__checkbox-input:checked + .order-form__label .order-form__checkbox {
   fill: @font-basic;
 }
 
 .order-form__label:hover .order-form__checkbox,
-.checkboxes-list__input:focus + .order-form__label .order-form__checkbox {
+.order-form__checkbox-input:focus + .order-form__label .order-form__checkbox {
   stroke: @product-types-basic;
 }
 
-.checkboxes-list__input:active + .order-form__label .order-form__checkbox {
+.order-form__checkbox-input:active + .order-form__label .order-form__checkbox {
   stroke: @font-basic;
   stroke-opacity: 0.3;
 }
 
 .order-form__label:hover,
-.checkboxes-list__input:focus + .order-form__label,
-.radio-list__input:focus + .order-form__label {
+.order-form__checkbox-input:focus + .order-form__label,
+.order-form__radio-input:focus + .order-form__label {
   color: @product-types-basic;
 }
 
@@ -293,7 +293,7 @@
   margin: 0;
 }
 
-.name-list__item .order-form__label {
+.order-form__name .order-form__label {
   padding-left: 0;
 }
 
@@ -348,9 +348,14 @@
   }
 
   &--communication {
+    box-sizing: border-box;
+    padding-right: 55px;
+
     @media (min-width: @tablet-width) {
+      box-sizing: content-box;
       flex-grow: 1;
       width: auto;
+      padding-right: 70px;
       padding-left: 17px;
 
       .line-size(19px, 19px);
