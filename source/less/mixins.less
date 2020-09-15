@@ -8,3 +8,20 @@
   font-size: @font-size;
   line-height: @line-height;
 }
+
+.modal(@top: 0, @right: 0, @bottom: 0, @left: 0) {
+  position: fixed;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+
+  display: none;
+  margin: auto;
+
+  color: @font-section;
+
+  background-color: @background-basic;
+  border: 1px solid @modal-border;
+  box-shadow: 0 5px 10px @modal-shadow;
+}

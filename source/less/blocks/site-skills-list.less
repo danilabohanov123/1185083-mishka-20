@@ -6,9 +6,9 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 45% 1fr;
-    grid-column-gap: 70px;
-    grid-row-gap: 57px;
+    grid-template-columns: 40% 1fr;
+    grid-column-gap: 67px;
+    grid-row-gap: 47px;
   }
 
   @media (min-width: @desktop-width) {
@@ -20,44 +20,76 @@
 .site-skills-list__item {
   position: relative;
 
-  padding-top: 77px;
+  padding-top: 83px;
 
   font-weight: bold;
   .line-size(17px, 20px);
 
   @media (min-width: @tablet-width) {
-    padding-top: 90px;
+    padding-top: 63px;
 
     .line-size(20px, 22px);
+
+    &:nth-child(2) {
+      grid-row-start: 2;
+    }
+
+    &:nth-child(3) {
+      grid-row-start: 3;
+    }
   }
 
   &--ecological-material {
-    .background-image(url("../img/icon-feature-flower.svg"), 5px 32px, no-repeat);
+    .background-image(url("../img/feature-flower.svg"), 8px 27px, no-repeat);
     background-size: 32px 37px;
+
+    @media (min-width: @tablet-width) {
+      background-position: 8px 5px;
+    }
   }
 
   &--scandinavian-style {
-    .background-image(url("../img/icon-feature-money.svg"), 0 32px, no-repeat);
+    .background-image(url("../img/feature-money.svg"), 0 29px, no-repeat);
     background-size: 47px 27px;
+
+    @media (min-width: @tablet-width) {
+      background-position: 0 8px;
+    }
   }
 
   &--more-likes {
-    .background-image(url("../img/icon-feature-heart.svg"), 3px 32px, no-repeat);
+    .background-image(url("../img/feature-heart.svg"), 7px 35px, no-repeat);
     background-size: 34px 27px;
+
+    @media (min-width: @tablet-width) {
+      background-position: 7px 15px;
+    }
   }
 
   &--handmade-work {
-    .background-image(url("../img/icon-feature-ball.svg"), 0 32px, no-repeat);
+    .background-image(url("../img/feature-ball.svg"), 3px 32px, no-repeat);
     background-size: 35px 34px;
+
+    @media (min-width: @tablet-width) {
+      background-position: 3px 11px;
+    }
   }
 
   &--manufacturer {
-    .background-image(url("../img/icon-feature-rocket.svg"), -2px 32px, no-repeat);
+    .background-image(url("../img/feature-rocket.svg"), -4px 32px, no-repeat);
     background-size: 55px 23px;
+
+    @media (min-width: @tablet-width) {
+      background-position: -3px 11px;
+    }
   }
 
   &--gift-wrapping {
-    .background-image(url("../img/icon-feature-gift.svg"), 0 32px, no-repeat);
+    .background-image(url("../img/feature-gift.svg"), 3px 30px, no-repeat);
     background-size: 33px 32px;
+
+    @media (min-width: @tablet-width) {
+      background-position: 3px 11px;
+    }
   }
 }

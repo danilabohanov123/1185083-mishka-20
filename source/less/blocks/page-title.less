@@ -8,17 +8,19 @@
   .line-size(27px, 30px);
   text-align: center;
 
+  background-color: inherit;
+
   @media (min-width: @tablet-width) {
     padding-top: 57px;
-    padding-bottom: 65px;
+    padding-bottom: 85px;
 
     .line-size(43px, 50px);
   }
 
   @media (min-width: @desktop-width) {
-    width: 700px;
+    width: @desktop-width - 100px;
     padding-top: 57px;
-    padding-bottom: 80px;
+    padding-bottom: 114px;
 
     .line-size(53px, 57px);
   }
@@ -26,9 +28,9 @@
   &--main-page {
     min-height: 180px;
     padding-top: 73px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
-    .background-image(url("../img/hero-mobile@1x.jpg"), top, no-repeat);
+    .background-image(url("../img/hero-mobile@1x.jpg"), center -18px, no-repeat);
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-mobile@2x.jpg");
@@ -38,9 +40,10 @@
     @media (min-width: @tablet-width) {
       min-height: 405px;
       padding-top: 111px;
-      padding-bottom: 120px;
+      padding-right: 55px;
+      padding-bottom: 67px;
 
-      .background-image(url("../img/hero-tablet@1x.jpg"), top, no-repeat);
+      .background-image(url("../img/hero-tablet@1x.jpg"), center -43px, no-repeat);
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/hero-tablet@2x.jpg");
@@ -49,11 +52,11 @@
     }
 
     @media (min-width: @desktop-width) {
-      min-height: 402px;
+      min-height: 583px;
       padding-top: 114px;
       padding-bottom: 120px;
 
-      .background-image(url("../img/hero-desktop@1x.jpg"), top, no-repeat);
+      .background-image(url("../img/hero-desktop@1x.jpg"), center -44px, no-repeat);
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/hero-desktop@2x.jpg");
@@ -68,17 +71,23 @@
     height: 24px;
 
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
 
     @media (min-width: @tablet-width) {
-      .background-image(url("../img/bg-zigzag-fill.svg"), 0 0, repeat);
+      .background-image(url("../img/bg-zigzag-fill-tablet.svg"), 0 0, repeat);
       background-size: auto 24px;
     }
 
     @media (min-width: @desktop-width) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: @desktop-width;
       height: 34px;
 
+      .background-image(url("../img/bg-zigzag-fill-desktop.svg"), 0 0, repeat);
       background-size: auto 34px;
     }
   }

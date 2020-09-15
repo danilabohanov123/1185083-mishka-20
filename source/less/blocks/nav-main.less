@@ -39,3 +39,33 @@
 .nav-main--no-js .nav-main__toggle {
   display: none;
 }
+
+.nav-main--show .nav-main__toggle {
+  top: 30px;
+
+  width: 21px;
+  height: 21px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: -3px;
+
+    width: 27px;
+    height: 2px;
+
+    background-color: @font-basic;
+    box-shadow: none;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

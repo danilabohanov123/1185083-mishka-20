@@ -1,13 +1,119 @@
 .contacts-table {
+  display: block;
+
   .line-size(15px, 30px);
   color: @font-section;
+
+  @media (min-width: @tablet-width) {
+    .line-size(17px, 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: table;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-.contacts-table__title {
-  font-weight: bold;
-  .line-size(18px, 30px);
+.contacts-table__body {
+  display: contents;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 334px 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: contents;
+  }
 }
 
 .contacts-table__link {
   color: inherit;
+
+  border-bottom: 1px solid @product-types-basic;
+
+  &:hover,
+  &:focus {
+    color: @product-types-active;
+    text-decoration-color: @product-types-active;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    padding-bottom: 3px;
+  }
+}
+
+.contacts-table__item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: wrap;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: table-row;
+
+    vertical-align: top;
+  }
+}
+
+.contacts-table__type {
+  display: block;
+  flex-grow: 1;
+  padding: 0;
+  padding-right: 3px;
+  padding-bottom: 25px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 74px;
+    padding-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: table-cell;
+    width: 72px;
+    padding-bottom: 30px;
+
+    vertical-align: top;
+  }
+}
+
+.contacts-table__value {
+  display: block;
+  width: 183px;
+  padding-bottom: 50px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: table-cell;
+    width: auto;
+    padding-bottom: 30px;
+  }
 }

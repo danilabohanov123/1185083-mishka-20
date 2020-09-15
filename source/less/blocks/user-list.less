@@ -1,11 +1,18 @@
 .user-list {
-  display: contents;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: contents;
+  }
 
   list-style: none;
 }
 
-.nav-main--closed .user-list {
-  display: none;
+.nav-main--no-js .user-list,
+.nav-main--show .user-list {
+  @media (max-width: @tablet-width - 1) {
+    display: contents;
+  }
 }
 
 .user-list__item {
@@ -14,7 +21,7 @@
   padding-top: 27px;
   padding-right: 10%;
   padding-bottom: 27px;
-  padding-left: 25%;
+  padding-left: 24%;
   order: 3;
 
   box-shadow: 0 1px 0 @border-table,
@@ -24,7 +31,7 @@
     box-sizing: border-box;
     align-items: center;
     padding: 32px 0;
-    box-shadow: none;
+    box-shadow: inset 0 -1px 0 @border-table;
   }
 }
 
@@ -56,12 +63,12 @@
     text-align: left;
   }
 
-  &[href]:hover,
-  &[href]:focus {
+  &:hover,
+  &:focus {
     color: @font-section-hover;
   }
 
-  &[href]:active {
+  &:active {
     color: @font-section-active;
   }
 }
@@ -110,7 +117,6 @@
   width: 21px;
   height: 19px;
 
-  fill: @nav-toggle;
   opacity: 0.2;
 
   @media (min-width: @tablet-width) {
@@ -132,6 +138,7 @@
 }
 
 .user-list__icon-search {
+  position: absolute;
   top: 50%;
   left: -44px;
   transform: translateY(-50%);

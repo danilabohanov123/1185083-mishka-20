@@ -1,11 +1,13 @@
 .social-networks-list {
+  position: relative;
+
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 28%;
+  padding: 0 23%;
 
   list-style: none;
 
@@ -16,6 +18,23 @@
 
   @media (min-width: @desktop-width) {
     width: 13.4%;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -27px;
+    right: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: @footer-line;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 

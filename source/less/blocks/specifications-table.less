@@ -11,13 +11,32 @@
 }
 
 .specifications-table__specification {
-  padding-bottom: 10px;
+  padding: 9px 0;
+
+  vertical-align: top;
 
   border-bottom: 1px solid @border-table;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 7px;
+    padding-bottom: 12px;
+  }
 }
 
 .specifications-table__value {
-  padding-bottom: 10px;
+  padding: 9px 0;
+  padding-left: 20px;
+
+  vertical-align: top;
 
   border-bottom: 1px solid @border-table;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 7px;
+    padding-bottom: 12px;
+  }
 }

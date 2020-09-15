@@ -1,16 +1,232 @@
+.production-process {
+  position: relative;
+
+  padding-bottom: 58px;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    padding-bottom: 104px;
+  }
+}
+
+.production-process__main-group {
+  display: flex;
+  flex-direction: column;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px @product-shadow;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px @product-shadow;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
 .production-process__title {
+  position: relative;
+
+  margin: 0;
+  padding-top: 21px;
+  padding-right: 13px;
+  padding-bottom: 27px;
+  padding-left: 91px;
+  order: -1;
+
   font-weight: bold;
   .line-size(17px, 24px);
+
+  border: 1px solid @border-table;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 30px;
+    left: 34px;
+
+    width: 32px;
+    height: 32px;
+
+    .background-image(url("../img/video.svg"), 0 0, no-repeat);
+
+    @media (min-width: @tablet-width) {
+      top: 34px;
+      left: 42px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 40px;
+      left: 77px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+    padding-right: 40px;
+    padding-bottom: 25px;
+    padding-left: 107px;
+
+    font-size: 20px;
+
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    min-height: 144px;
+    padding-top: 96px;
+    padding-right: 57px;
+    padding-bottom: 0;
+    padding-left: 79px;
+  }
+}
+
+.production-process__info-wrapper {
+  padding-top: 33px;
+  padding-right: 31px;
+  padding-bottom: 31px;
+  padding-left: 34px;
+
+  border: 1px solid @border-table;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-right: 40px;
+    padding-bottom: 46px;
+    padding-left: 40px;
+    border-top: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    min-height: 311px;
+    padding-top: 26px;
+    padding-right: 54px;
+    padding-bottom: 60px;
+    padding-left: 78px;
+  }
 }
 
 .production-process__description {
+  margin: 0;
+  margin-bottom: 41px;
+
   .line-size(13px, 24px);
   color: @font-section;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+
+    .line-size(15px, 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 51px;
+  }
 }
 
 .production-process__make-order {
+  display: block;
+
+  padding: 14px 11px;
+
   font-weight: bold;
-  .line-size(17px, 20px);
+  .line-size(18px, 20px);
+  text-align: center;
   text-transform: uppercase;
   color: @font-section;
+
+  border: 2px solid @font-section;
+
+  &:hover,
+  &:focus {
+    color: @background-basic;
+
+    background-color: @font-section;
+  }
+
+  &:active {
+    color: @link-hover;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 12px;
+    padding-left: 9px;
+  }
+}
+
+.production-process__video {
+  position: relative;
+
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    width: 683px;
+  }
+}
+
+.production-process__video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 101px;
+  height: 77px;
+
+  background-color: @transparent;
+  border: none;
+
+  .background-image(url("../img/play.svg"), 0 0, no-repeat);
+  background-size: cover;
+}
+
+.production-process__video:hover .production-process__video-button,
+.production-process__video:focus .production-process__video-button {
+  width: 121px;
+  height: 92px;
+}
+
+.production-process__video:active .production-process__video-button {
+  width: 81px;
+  height: 62px;
+
+  opacity: 0.3;
+}
+
+.production-process__video-preview {
+  display: block;
+  width: 100%;
+}
+
+.production-process__items-wrapper {
+  display: contents;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 367px;
+  }
 }
