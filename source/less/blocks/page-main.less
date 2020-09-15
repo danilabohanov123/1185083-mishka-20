@@ -1,7 +1,13 @@
 .page-main__group-wrapper {
+  padding-top: 2px;
+
   background-color: @background-special;
 
   &--no-background {
     background-color: @background-footer;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
   }
 }

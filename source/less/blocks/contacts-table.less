@@ -1,10 +1,10 @@
 .contacts-table {
+  display: block;
+
   .line-size(15px, 30px);
   color: @font-section;
 
   @media (min-width: @tablet-width) {
-    display: block;
-
     .line-size(17px, 30px);
   }
 
@@ -23,7 +23,7 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 49.5% 49%;
+    grid-template-columns: 334px 1fr;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,8 +33,8 @@
 
 .contacts-table__link {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-color: @product-types-basic;
+
+  border-bottom: 1px solid @product-types-basic;
 
   &:hover,
   &:focus {
@@ -45,29 +45,37 @@
   &:active {
     text-decoration: none;
   }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    padding-bottom: 3px;
+  }
 }
 
 .contacts-table__item {
-  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 5px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
     display: table-row;
+
+    vertical-align: top;
   }
 }
 
 .contacts-table__type {
-  width: 80px;
+  display: block;
+  flex-grow: 1;
   padding: 0;
+  padding-right: 3px;
   padding-bottom: 25px;
-
-  vertical-align: top;
 
   &:last-child {
     padding-bottom: 0;
@@ -75,8 +83,8 @@
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
-    display: block;
-    width: 75px;
+    flex-grow: 0;
+    width: 74px;
     padding-right: 0;
   }
 
@@ -84,21 +92,23 @@
     display: table-cell;
     width: 72px;
     padding-bottom: 30px;
+
+    vertical-align: top;
   }
 }
 
 .contacts-table__value {
+  display: block;
+  width: 183px;
   padding-bottom: 50px;
-
-  vertical-align: top;
 
   &:last-child {
     padding-bottom: 0;
   }
 
   @media (min-width: @tablet-width) {
-    display: block;
-    width: 250px;
+    width: 256px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {

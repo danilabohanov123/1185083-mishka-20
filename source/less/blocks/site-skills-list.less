@@ -29,6 +29,14 @@
     padding-top: 63px;
 
     .line-size(20px, 22px);
+
+    &:nth-child(2) {
+      grid-row-start: 2;
+    }
+
+    &:nth-child(3) {
+      grid-row-start: 3;
+    }
   }
 
   &--ecological-material {
@@ -45,8 +53,6 @@
     background-size: 47px 27px;
 
     @media (min-width: @tablet-width) {
-      grid-row-start: 2;
-
       background-position: 0 8px;
     }
   }
@@ -56,8 +62,6 @@
     background-size: 34px 27px;
 
     @media (min-width: @tablet-width) {
-      grid-row-start: 3;
-
       background-position: 7px 15px;
     }
   }
